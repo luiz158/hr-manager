@@ -44,4 +44,16 @@ public class EmployeeController {
         }
         return modelAndView;
     }
+
+
+    @RequestMapping(method = RequestMethod.GET, value = "/calender")
+    public ModelAndView showCalender(){
+        System.out.println(" ============ show calender ");
+
+        //todo add log records
+//        Employee employee =  new Employee();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("employeeCalender");
+        return modelAndView;
+    }
 }
