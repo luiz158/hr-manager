@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>admin-webapp</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+    <name>admin-webapp</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <app.core.version>1.0</app.core.version>
+    </properties>
+
+    <parent>
+        <artifactId>codesync-hr-manager</artifactId>
+        <groupId>com.codesync</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.8</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--spring dependency -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.framework.version}</version>
+        </dependency>
+
+        <!--app core dependency -->
+        <dependency>
+            <groupId>com.codesync</groupId>
+            <artifactId>app-core</artifactId>
+            <version>${app.core.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>hr-admin</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
