@@ -4,25 +4,14 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <%--<link href='../fullcalendar.css' rel='stylesheet' />--%>
-    <%--<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />--%>
-    <%--<script src='../lib/moment.min.js'></script>--%>
-    <%--<script src='../lib/jquery.min.js'></script>--%>
-    <%--<script src='../fullcalendar.min.js'></script>--%>
 
-    <%--<link href='/calender-resources/fullcalendar.css' rel='stylesheet' />--%>
-    <%--<link href='/calender-resources/fullcalendar.print.css' rel='stylesheet' media='print' />--%>
-    <%--<script src='/calender-resources/lib/moment.min.js'></script>--%>
-    <%--<script src='/calender-resources/lib/jquery.min.js'></script>--%>
-    <%--<script src='/calender-resources/fullcalendar.min.js'></script>--%>
+    <spring:url value="/resources/fullcalender-lib/fullcalendar.min.css" var="css1" />
+    <spring:url value="/resources/fullcalender-lib/fullcalendar.print.css" var="css2" />
+    <spring:url value="/resources/fullcalender-lib/moment.min.js" var="jquery1" />
+    <spring:url value="/resources/fullcalender-lib/jquery.min.js" var="jquery2"   />
+    <spring:url value="/resources/fullcalender-lib/fullcalendar.min.js" var="jquery3" />
 
-    <spring:url value="/resources/calender-resources/fullcalendar.css" var="css1" />
-    <spring:url value="/resources/calender-resources/fullcalendar.print.css" var="css2" />
-    <spring:url value="/resources/calender-resources/lib/moment.min.js" var="jquery1" />
-    <spring:url value="/resources/calender-resources/lib/jquery.min.js" var="jquery2"   />
-    <spring:url value="/resources/calender-resources/fullcalendar.min.js" var="jquery3" />
-
-    <link href='${css1}' rel='stylesheet' />
+    <link href="${css1}" rel='stylesheet' />
     <link href='${css2}' rel='stylesheet' media='print' />
     <script src='${jquery2}'></script>
     <script src='${jquery1}'></script>
