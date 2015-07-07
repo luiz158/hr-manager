@@ -5,6 +5,12 @@
 <head>
     <meta charset='utf-8' />
 
+    <%--<spring:url value="/resources/fullcalender-lib/fullcalendar.min.css" var="css1" />--%>
+    <%--<spring:url value="/resources/fullcalender-lib/fullcalendar.print.css" var="css2" />--%>
+    <%--<spring:url value="/resources/fullcalender-lib/moment.min.js" var="jquery1" />--%>
+    <%--<spring:url value="/resources/fullcalender-lib/jquery.min.js" var="jquery2"   />--%>
+    <%--<spring:url value="/resources/fullcalender-lib/fullcalendar.min.js" var="jquery3" />--%>
+
     <spring:url value="/resources/fullcalender-lib/fullcalendar.min.css" var="css1" />
     <spring:url value="/resources/fullcalender-lib/fullcalendar.print.css" var="css2" />
     <spring:url value="/resources/fullcalender-lib/moment.min.js" var="jquery1" />
