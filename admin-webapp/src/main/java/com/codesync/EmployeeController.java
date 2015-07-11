@@ -56,4 +56,16 @@ public class EmployeeController {
         modelAndView.setViewName("employeeCalender");
         return modelAndView;
     }
+
+
+    @RequestMapping(method = RequestMethod.GET, value = "/dashboard")
+    public ModelAndView showDashaBoard(){
+        System.out.println(" ============ show dashboard ");
+
+        //todo add log records
+//        Employee employee =  new Employee();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("dashboard");
+        return modelAndView;
+    }
 }
