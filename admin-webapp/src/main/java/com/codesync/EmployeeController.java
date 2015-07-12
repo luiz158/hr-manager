@@ -30,7 +30,7 @@ public class EmployeeController {
     @RequestMapping(method = RequestMethod.POST, value = "/submitEmpRegistrationForm")
     public ModelAndView submitEmployeeRegistrationForm(@ModelAttribute @Valid Employee employee,BindingResult bindingResult){
         System.out.println(" ============ submit form ["+employee.toString()+"]");
-        System.out.println(" ============ first name ["+employee.getFirstName()+"]");
+//        System.out.println(" ============ first name ["+employee.getFirstName()+"]");
         System.out.println(" ============  ["+bindingResult.hasErrors()+"]");
         //todo add log records
 //        Employee employee =  new Employee();
