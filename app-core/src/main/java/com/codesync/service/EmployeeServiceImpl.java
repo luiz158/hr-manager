@@ -16,15 +16,15 @@ public class EmployeeServiceImpl implements EmployeeService{
     private EmployeeDao dao;
 
     public void saveEmployee(Employee employee) {
-        dao.saveEmployee(employee);
+        dao.save(employee);
     }
 
     public List<Employee> findAllEmployees() {
-        return dao.findAllEmployees();
+        return dao.findAll();
     }
 
     public void deleteEmployeeBySsn(String ssn) {
-        dao.deleteEmployeeBySsn(ssn);
+        dao.delete(ssn);
     }
 
 }

@@ -23,7 +23,7 @@ public class EmployeeDaoImplTest extends AbstractTestNGSpringContextTests{
     public void testSaveEmployee() throws Exception {
 
         Employee employee = new Employee();
-        employee.setName("chathuranga");
+        employee.setName("chathuranga ..");
         employee.setSalary(new BigDecimal(5000));
         employee.setSsn("ddd654");
         employeeDao.saveEmployee(employee);
