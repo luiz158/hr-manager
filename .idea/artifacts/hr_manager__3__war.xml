@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hr-manager (3):war">
+    <output-path>$PROJECT_DIR$/user-webapp/target</output-path>
+    <root id="archive" name="user-webap-1.0.war">
+      <element id="artifact" artifact-name="hr-manager (3):war exploded" />
+    </root>
+  </artifact>
+</component>
