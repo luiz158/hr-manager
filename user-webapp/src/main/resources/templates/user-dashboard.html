@@ -277,9 +277,19 @@
             <div class="pull-left">
                 <a href="#" class="btn btn-default btn-flat">Profile</a>
             </div>
+
+            <!--<div class="pull-right">-->
+            <!--<a th:href="@{/login?logout}" class="btn btn-default btn-flat">Sign out</a>-->
+            <!--</div>-->
+
             <div class="pull-right">
-                <a th:href="@{/login?logout}" class="btn btn-default btn-flat">Sign out</a>
+                <form id="logout" th:action="@{/logout}" method="post" >
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+                    <input type="submit" class="btn btn-default btn-flat" value="SignOut"/>
+                </form>
             </div>
+
         </li>
     </ul>
 </li>

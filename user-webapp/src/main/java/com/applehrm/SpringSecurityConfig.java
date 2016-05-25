@@ -27,6 +27,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
                 .and().formLogin().loginPage("/login")
                 .usernameParameter("username").passwordParameter("password")
+                .and().logout().logoutSuccessUrl("/login?logout")
                 .and().exceptionHandling().accessDeniedPage("/access_denied");
     }
 }
