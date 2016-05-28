@@ -13,6 +13,7 @@ public class HrManagerUserWebApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println(" web application context loads =========");
 	}
 
 }
