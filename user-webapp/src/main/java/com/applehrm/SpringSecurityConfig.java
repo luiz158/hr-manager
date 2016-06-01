@@ -1,12 +1,13 @@
 package com.applehrm;
 
-import com.hr.core.service.SystemUserDetailsService;
+import com.hr.core.service.AppUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 /**
  * Created by xadmin on 3/18/16.
@@ -19,14 +20,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Qualifier("customUserDetailsService")
-    SystemUserDetailsService userDetailsService;
+    AppUserDetailsService userDetailsService;
 
 
     @Autowired
     public void configureAuthenticationManager(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
       System.out.println("executing authentication manager");
-      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
-//        authenticationManagerBuilder.userDetailsService(userDetailsService);
+//      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
+        authenticationManagerBuilder.userDetailsService(userDetailsService);
     }
 
     @Override
@@ -38,7 +39,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
                 .and().formLogin().loginPage("/login")
                 .usernameParameter("username").passwordParameter("password")
-                .and().logout().logoutSuccessUrl("/login?logout")
+                .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout")
                 .and().exceptionHandling().accessDeniedPage("/access_denied");
 
 
