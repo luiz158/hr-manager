@@ -2,9 +2,10 @@ package com.hr.core.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
-@Table(name = "system_user")
+@Table(name = "user")
 public class User implements Serializable {
 
     @Id
@@ -16,6 +17,10 @@ public class User implements Serializable {
 
     @Column(name = "password")
     private String password;
+
+    @ManyToMany
+    @JoinTable(name = "user_roles",joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<UserRole> rolesList;
 
     public Long getId() {
         return id;
@@ -39,5 +44,13 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<UserRole> getRolesList() {
+        return rolesList;
+    }
+
+    public void setRolesList(List<UserRole> rolesList) {
+        this.rolesList = rolesList;
     }
 }

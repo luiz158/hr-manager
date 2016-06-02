@@ -1,8 +1,8 @@
 package com.hr.core.service;
 
+import com.hr.core.dao.UserDao;
 import com.hr.core.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +17,10 @@ import java.util.List;
 public class AppUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UserService userService;
+    private UserDao userService;
+
+//    @Autowired
+//    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -28,6 +31,7 @@ public class AppUserDetailsService implements UserDetailsService {
         user.setPassword("123");
 
 
+//        System.out.println("encoded password ["+bCryptPasswordEncoder.encode("123")+"]");
         //todo  uncommment
         if(user == null){
             throw new UsernameNotFoundException("No user found for username "+username);
