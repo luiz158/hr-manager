@@ -1,5 +1,6 @@
-package com.applehrm;
+package com.hr.web.config;
 
+import com.hr.HrManagerUserWebApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 

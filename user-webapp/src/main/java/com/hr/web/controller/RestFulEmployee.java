@@ -1,4 +1,4 @@
-package com.applehrm;
+package com.hr.web.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
