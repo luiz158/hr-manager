@@ -11,7 +11,7 @@
 	<description>business layer core for the HR Manager</description>
 
 	<parent>
-		<groupId>com.applehrm</groupId>
+		<groupId>com.hr.web</groupId>
 		<artifactId>hr-manager</artifactId>
 		<version>1.0</version>
 		<relativePath>../pom.xml</relativePath>

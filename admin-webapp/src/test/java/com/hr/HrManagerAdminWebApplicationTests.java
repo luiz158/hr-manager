@@ -1,4 +1,4 @@
-package com.applehrm;
+package com.hr;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
