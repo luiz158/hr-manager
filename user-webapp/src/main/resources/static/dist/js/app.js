@@ -391,19 +391,12 @@ function _init() {
         var _this = this;
         var animationSpeed = $.AdminLTE.options.animationSpeed;
         $(document).on('click', menu + ' li a', function (e) {
-            console.log("click menu ["+menu+"]");
             //Get the clicked link and the next element
             var $this = $(this);
 //            var $this = $(".sidebar-menu").find("personal-section");
             var checkElement = $this.next();
 //            var checkElement = $(".sidebar-menu").find("personal-section");
 
-            console.log("this=====");
-            console.log($this);
-
-
-            console.log("check element==");
-            console.log(checkElement);
 
             //Check if the next element is a menu and is visible
             if ((checkElement.is('.treeview-menu')) && (checkElement.is(':visible'))) {
@@ -423,7 +416,6 @@ function _init() {
                 var ul = parent.find('ul:visible').slideUp(animationSpeed);
                 //Remove the menu-open class from the parent
                 ul.removeClass('menu-open');
-                console.log("close menu");
                 //Get the parent li
                 var parent_li = $this.parent("li");
 
@@ -431,7 +423,6 @@ function _init() {
                 checkElement.slideDown(animationSpeed, function () {
                     //Add the class active to the parent li
                     checkElement.addClass('menu-open');
-                    console.log("open menu");
                     parent.find('li.active').removeClass('active');
                     parent_li.addClass('active');
                     //Fix the layout in case the sidebar stretches over the height of the window
@@ -450,7 +441,6 @@ function _init() {
 
 
     $.AdminLTE.treeViewOnPageLoad = function (menu) {
-        console.log("==treeview on page loading");
         $( document ).ready(function() {
             // Handler for .ready() called.
             var animationSpeed = $.AdminLTE.options.animationSpeed;

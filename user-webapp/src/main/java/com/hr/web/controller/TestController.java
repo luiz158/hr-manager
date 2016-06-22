@@ -1,7 +1,6 @@
 package com.hr.web.controller;
 
 import com.hr.core.model.BasicInfo;
-import org.aspectj.asm.AsmManager;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
