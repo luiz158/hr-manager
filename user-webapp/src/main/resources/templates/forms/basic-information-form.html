@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title></title>
+</head>
+<body>
+
+<div th:fragment = "basic-information-form">
+
+    <form role="form">
+        <div class="box-body">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter email"/>
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" class="form-control" id="middleName" placeholder="Password"/>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" class="form-control" id="nationality" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="countryOfBirth">Country of Birth</label>
+                <input type="text" class="form-control" id="countryOfBirth" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="text" class="form-control" id="dateOfBirth" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" class="form-control" id="gender" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="maritalStatus">Marital Status</label>
+                <input type="text" class="form-control" id="maritalStatus" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="ethnicity">Ethnicity</label>
+                <input type="text" class="form-control" id="ethnicity" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="religious">Religious</label>
+                <input type="text" class="form-control" id="religious" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="immigrationStatus">Immigration Status</label>
+                <input type="text" class="form-control" id="immigrationStatus" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="nic">NIC</label>
+                <input type="text" class="form-control" id="nic" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="ssn">SSN</label>
+                <input type="text" class="form-control" id="ssn" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="passportNo">Passport Number</label>
+                <input type="text" class="form-control" id="passportNo" placeholder="Password"/>
+            </div>
+
+            <div class="form-group">
+                <label for="drivingLicenseNo">Driving Licence No</label>
+                <input type="text" class="form-control" id="drivingLicenseNo" placeholder="Password"/>
+            </div>
+
+
+            <div class="form-group">
+                <label for="personalMobileNumber">Mobile Number</label>
+                <input type="text" class="form-control" id="personalMobileNumber" placeholder="Enter Personal Mobile Number"/>
+            </div>
+
+            <div class="form-group">
+                <label for="homeLandPhoneNumber">Home Telephone No</label>
+                <input type="text" class="form-control" id="homeLandPhoneNumber" placeholder="Enter Home Land phone number"/>
+            </div>
+
+            <div class="form-group">
+                <label for="personalEmailAddress">Personal Email</label>
+                <input type="text" class="form-control" id="personalEmailAddress" placeholder="Enter Personal Email Address"/>
+            </div>
+
+            <div class="form-group">
+                <label for="personalWebSiteLink">Website</label>
+                <input type="text" class="form-control" id="personalWebSiteLink" placeholder="Wenter Personal Website"/>
+            </div>
+
+
+            <fieldset>
+                <legend>Permanent Address</legend>
+                <div class="form-group">
+                    <label for="permanentAddressLineOne">Address Line 1</label>
+                    <input type="text" class="form-control" id="permanentAddressLineOne" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddressLineTwo">Address Line 2</label>
+                    <input type="text" class="form-control" id="permanentAddressLineTwo" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddresCity">City</label>
+                    <input type="text" class="form-control" id="permanentAddresCity" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddressProvince">Province</label>
+                    <input type="text" class="form-control" id="permanentAddressProvince" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddressPostalCode">Postal Code / ZIP Code</label>
+                    <input type="text" class="form-control" id="permanentAddressPostalCode" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="permanentAddressCountry">Country</label>
+                    <input type="text" class="form-control" id="permanentAddressCountry" placeholder="Password"/>
+                </div>
+
+            </fieldset>
+
+
+
+            <div class="form-group">
+                Is your current residence address is different from the permanent address?
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="currentlyLivingInPermanentAddress"  value="no" checked=""/>
+                        No. it is same as permanent address
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="currentlyLivingInPermanentAddress"  value="yes"/>
+                        Yes. it is different address
+                    </label>
+                </div>
+            </div>
+
+
+            <fieldset>
+                <legend>Current Address</legend>
+                <div class="form-group">
+                    <label for="currentAddressLineOne">Address Line 1</label>
+                    <input type="text" class="form-control" id="currentAddressLineOne" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentAddressLineTwo">Address Line 2</label>
+                    <input type="text" class="form-control" id="currentAddressLineTwo" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentAddresCity">City</label>
+                    <input type="text" class="form-control" id="currentAddresCity" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentAddressProvince">Province</label>
+                    <input type="text" class="form-control" id="currentAddressProvince" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentAddressPostalCode">Postal Code / ZIP Code</label>
+                    <input type="text" class="form-control" id="currentAddressPostalCode" placeholder="Password"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentAddressCountry">Country</label>
+                    <input type="text" class="form-control" id="currentAddressCountry" placeholder="Password"/>
+                </div>
+
+            </fieldset>
+
+        </div>
+
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -29,6 +29,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureAuthenticationManager(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
       System.out.println("executing authentication manager");
 //      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
+//      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
         authenticationManagerBuilder.userDetailsService(userDetailsService);
 //        authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
