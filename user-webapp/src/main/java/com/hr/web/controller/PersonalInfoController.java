@@ -40,4 +40,13 @@ public class PersonalInfoController {
         System.out.println(" returning to the view ");
         return modelAndView;
     }
+
+
+    @RequestMapping(value = "/employee-work-experiences",method = RequestMethod.GET)
+    public ModelAndView showEmployeeWorkExperiences(BasicInfo basicInfo){
+        System.out.println(" displaying employee work experiences view ");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("work-experiences");
+        return modelAndView;
+    }
 }
