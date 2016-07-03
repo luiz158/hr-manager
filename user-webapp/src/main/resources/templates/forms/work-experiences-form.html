@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title></title>
+</head>
+<body>
+
+<div th:fragment = "work-experiences-form">
+<form role="form">
+    <div class="box-body">
+
+        Work Experiences Form
+
+        <div class="form-group">
+            <label for="employeeNumber">Employee Number</label>
+            <input type="email" class="form-control" name = "employeeNumber" id="employeeNumber" placeholder="Enter Employee Number"/>
+        </div>
+        <div class="form-group">
+            <label for="epfNo">EPF/ETF No</label>
+            <input type="text" class="form-control" id="epfNo" placeholder="Enter EPF/ETF No"/>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <input type="text" class="form-control" id="designation" placeholder="Enter Designation"/>
+        </div>
+
+        <div class="form-group">
+            <label for="employmentType">Employment Type</label>
+            <input type="text" class="form-control" id="employmentType" placeholder="Enter Employment Type"/>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department" placeholder="Enter Department"/>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfJoined">Date of Joined</label>
+            <input type="text" class="form-control" id="dateOfJoined" placeholder="Enter Date of Joined"/>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfConfirmed">Date of Confirmed</label>
+            <input type="text" class="form-control" id="dateOfConfirmed" placeholder="Enter Date of Confirmed"/>
+        </div>
+
+        <div class="form-group">
+            <label for="probationPeriod">Probation Period</label>
+            <input type="text" class="form-control" id="probationPeriod" placeholder="Enter Probation Period"/>
+        </div>
+
+
+        <div class="form-group">
+            <label for="workMobile">Work Mobile</label>
+            <input type="text" class="form-control" id="workMobile" placeholder="Enter Work Mobile"/>
+        </div>
+
+        <div class="form-group">
+            <label for="workEmail">Company Email</label>
+            <input type="text" class="form-control" id="workEmail" placeholder="Enter Company Email"/>
+        </div>
+
+        <div class="form-group">
+            <label for="workLandPhone">Land Phone</label>
+            <input type="text" class="form-control" id="workLandPhone" placeholder="Enter Land Phone"/>
+        </div>
+
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"/> Add Work Info
+            </label>
+        </div>
+    </div>
+
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</div>
+
+</body>
+</html>

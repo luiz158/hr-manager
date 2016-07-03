@@ -1,24 +1,22 @@
 package com.hr.web.controller;
 
-import com.hr.core.model.BasicInfo;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class TestController {
+public class UserHomeController {
 
 
-    @RequestMapping(value = {"/","/hello"})
+    @Secured({"ROLE_USER","ROLE_ADMIN","ROLE_SUPER_ADMIN"})
+    @RequestMapping(value = {"/"})
     public ModelAndView hello(){
         System.out.println("returning the index page from web app-=========");
         ModelAndView modelAndView = new ModelAndView();
@@ -27,6 +25,7 @@ public class TestController {
     }
 
 
+    @Secured("ROLE_SUPER_ADMIN")
     @RequestMapping(value = {"/user","/user/home"})
     public ModelAndView showUserDashBoard(){
         System.out.println("displaying user dashboard");

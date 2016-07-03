@@ -4,8 +4,11 @@ import com.hr.core.service.AppUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -15,10 +18,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  */
 //@Configuration
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity
-//@ComponentScan(basePackageClasses = com.hr.core.service.SystemUserDetailsService.class)
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
-//public class SpringSecurityConfig {
 
     @Autowired
     @Qualifier("customUserDetailsService")
@@ -27,33 +28,32 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureAuthenticationManager(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-      System.out.println("executing authentication manager");
-//      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
-//      authenticationManagerBuilder.inMemoryAuthentication().withUser("chat").password("chat123").roles("USER");
+        System.out.println("executing authentication manager");
         authenticationManagerBuilder.userDetailsService(userDetailsService);
-//        authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
-                .antMatchers("/user/**").access("hasRole('USER')")
-                .antMatchers("/admin/**").access("hasRole('ADMIN')")
-                .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
-                .and().formLogin().loginPage("/login")
+//                .antMatchers("/", "/home").hasAnyRole("ROLE_USER","ROLE_ADMIN","ROLE_SYS_ADMIN")
+//                .antMatchers("/user/**").access("hasRole('USER')")
+//                .antMatchers("/admin/**").access("hasRole('ADMIN')")
+//                .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
+//                .antMatchers("**/bootstrap/**","**/dist/**","**/plugins/**").permitAll()
+                .anyRequest().authenticated()
+                .and().formLogin().loginPage("/login").permitAll()
                 .usernameParameter("username").passwordParameter("password")
                 .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout")
                 .and().exceptionHandling().accessDeniedPage("/access_denied");
-
-
-//        http.authorizeRequests()
-//                .antMatchers("/", "/**").permitAll();
     }
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
 
+    /**
+     * Override this method to configure {@link org.springframework.security.config.annotation.web.builders.WebSecurity}. For example, if you wish to
+     * ignore certain requests.
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/bootstrap/**","/dist/**","/plugins/**");
+    }
 }

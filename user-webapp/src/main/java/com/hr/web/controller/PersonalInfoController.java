@@ -49,4 +49,32 @@ public class PersonalInfoController {
         modelAndView.setViewName("work-experiences");
         return modelAndView;
     }
+
+
+    @RequestMapping(value = "/employee-qualifications",method = RequestMethod.GET)
+    public ModelAndView showEmployeeQualifications(){
+        System.out.println(" displaying employee qualifications view ");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("employee-qualification");
+        return modelAndView;
+    }
+
+
+    @RequestMapping(value = "/employee-dependent-info",method = RequestMethod.GET)
+    public ModelAndView showEmployeeDependentDetails(){
+        System.out.println(" displaying employee dependent info ");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("employee-dependent-info");
+        return modelAndView;
+    }
+
+
+    @RequestMapping(value = "/employee-emergency-contacts",method = RequestMethod.GET)
+    public ModelAndView showEmployeeEmergencyContact(){
+        System.out.println(" displaying employee qualifications view ");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("employee-emergency-contact");
+        return modelAndView;
+    }
+
 }
