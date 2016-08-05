@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include = "fragments/head-tag :: head-tag">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <!--start-->
+
+    <div th:include = "fragments/header :: header">
+
+    </div>
+
+
+    <div th:include = "fragments/main-sidebar :: main-sidebar">
+
+    </div>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!--start-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div>
+                    <h3 class="box-title text-center" style="text-align: center;font-weight: bold;">Personal Information</h3>
+                </div>
+            </div>
+        </div>
+        <!--end-->
+
+        <!--carousal start-->
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+                <!--<div class="box-group" id="accordion">-->
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+
+
+                <div class="panel box box-danger">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">
+                            <a aria-expanded="false" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Work Experiences
+                            </a>
+                        </h4>
+                    </div>
+                    <!--<div style="height: 0px;" aria-expanded="false" id="collapseOne" class="panel-collapse collapse">-->
+                    <div  aria-expanded="false" id="collapseOne" class="panel-collapse collapse in">
+                        <div th:include = "forms/personal-info/work-experiences-form :: work-experiences-form">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class ="work-experiences-list">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Responsive Hover Table</h3>
+
+                            <div class="box-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                                    </input>
+
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                            <table class="table table-hover">
+                                <tbody><tr>
+                                    <th>ID</th>
+                                    <th>User</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Reason</th>
+                                </tr>
+                                <tr>
+                                    <td>183</td>
+                                    <td>John Doe</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-success">Approved</span></td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                </tr>
+                                <tr>
+                                    <td>219</td>
+                                    <td>Alexander Pierce</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-warning">Pending</span></td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                </tr>
+                                <tr>
+                                    <td>657</td>
+                                    <td>Bob Doe</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-primary">Approved</span></td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                </tr>
+                                <tr>
+                                    <td>175</td>
+                                    <td>Mike Doe</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-danger">Denied</span></td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                </tr>
+                                </tbody></table>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+                <!--</div>-->
+            </div>
+        </div>
+        <!--carousal ends-->
+    </div><!-- /.content-wrapper -->
+
+    <div th:include = "fragments/footer :: footer">
+
+    </div>
+
+
+    <div th:include = "fragments/control-sidebar :: control-sidebar">
+
+    </div>
+</div>
+
+
+<div th:include = "fragments/bottom-js-declaration :: bottom-js-declaration">
+
+</div>
+
+</body>
+</html>

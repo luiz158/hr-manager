@@ -46,7 +46,7 @@ public class PersonalInfoController {
     public ModelAndView showEmployeeWorkExperiences(BasicInfo basicInfo){
         System.out.println(" displaying employee work experiences view ");
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("work-experiences");
+        modelAndView.setViewName("employee-work-experiences");
         return modelAndView;
     }
 
@@ -59,7 +59,6 @@ public class PersonalInfoController {
         return modelAndView;
     }
 
-
     @RequestMapping(value = "/employee-dependent-info",method = RequestMethod.GET)
     public ModelAndView showEmployeeDependentDetails(){
         System.out.println(" displaying employee dependent info ");
@@ -68,7 +67,6 @@ public class PersonalInfoController {
         return modelAndView;
     }
 
-
     @RequestMapping(value = "/employee-emergency-contacts",method = RequestMethod.GET)
     public ModelAndView showEmployeeEmergencyContact(){
         System.out.println(" displaying employee qualifications view ");
@@ -76,5 +74,4 @@ public class PersonalInfoController {
         modelAndView.setViewName("employee-emergency-contact");
         return modelAndView;
     }
-
 }
