@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include = "fragments/head-tag :: head-tag">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <!--start-->
+
+    <div th:include = "fragments/header :: header">
+
+    </div>
+
+
+    <div th:include = "fragments/main-sidebar :: main-sidebar">
+
+    </div>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!--start-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div>
+                    <h3 class="box-title text-center" style="text-align: center;font-weight: bold;">Error 404</h3>
+                </div>
+
+                <div>
+                    <h4 class="box-title text-center">We cannot find the page, you are looking for!</h4>
+                </div>
+            </div>
+        </div>
+        <!--end-->
+
+    </div><!-- /.content-wrapper -->
+
+    <div th:include = "fragments/footer :: footer">
+
+    </div>
+
+
+    <div th:include = "fragments/control-sidebar :: control-sidebar">
+
+    </div>
+</div>
+
+
+<div th:include = "fragments/bottom-js-declaration :: bottom-js-declaration">
+
+</div>
+
+</body>
+</html>

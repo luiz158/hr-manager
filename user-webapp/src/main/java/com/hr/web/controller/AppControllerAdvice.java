@@ -4,9 +4,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import java.util.Collection;
-import java.util.Map;
-
 @ControllerAdvice(basePackages = "com.hr.web.controller")
 public class AppControllerAdvice {
 
@@ -14,5 +11,7 @@ public class AppControllerAdvice {
     public void globalDataSetUp(Model model){
         System.out.println(" Setting Up global data ");
          model.addAttribute("userFullName","Chathuranga Tennakoon");
+         //todo get from  database 
+         model.addAttribute("appUrl","http://localhost:8085/user-webapp/");
     }
 }

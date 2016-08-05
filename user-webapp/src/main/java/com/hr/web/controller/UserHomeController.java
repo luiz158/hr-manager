@@ -54,5 +54,4 @@ public class UserHomeController {
         modelAndView.setViewName("login");
         return modelAndView;
     }
-
 }
