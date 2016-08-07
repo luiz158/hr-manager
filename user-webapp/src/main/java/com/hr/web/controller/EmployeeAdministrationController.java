@@ -9,11 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class EmployeeAdministrationController {
 
-    @RequestMapping(value = "/administrate-employees",method = RequestMethod.GET)
+    @RequestMapping(value = "/add-moderate-system-user",method = RequestMethod.GET)
     public ModelAndView showEmployeeBasicInformationRegistrationView(BasicInfo basicInfo){
-        System.out.println(" displaying employee administration view ");
+        System.out.println(" displaying add/edit/remove system users view ");
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("employee-administration");
+        modelAndView.setViewName("administration/moderate-system-user");
         return modelAndView;
     }
 }

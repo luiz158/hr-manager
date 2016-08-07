@@ -1,82 +1,223 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:include = "fragments/head-tag :: head-tag">
-
+<head th:include="fragments/head-tag :: head-tag">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
+<!--start-->
+<div th:include="fragments/header :: header"></div>
+
+<div th:include="fragments/main-sidebar :: main-sidebar"></div>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
     <!--start-->
-
-    <div th:include = "fragments/header :: header">
-
-    </div>
-
-
-    <div th:include = "fragments/main-sidebar :: main-sidebar">
-
-    </div>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
-        <!--start-->
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div>
-                    <h3 class="box-title text-center" style="text-align: center;font-weight: bold;">Personal Information</h3>
-                </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>
+                <h3 class="box-title text-center"
+                    style="text-align: center; font-weight: bold;">Educational Qualifications</h3>
             </div>
         </div>
-        <!--end-->
+    </div>
+    <!--end-->
 
-        <!--carousal start-->
-        <div class="row">
 
-            <div class="col-md-8 col-md-offset-2">
-                <!--<div class="box-group" id="accordion">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 col-md-offset-5">-->
+            <!--<div style="margin-bottom: 15px;">-->
+                <!--<img width="180" height="180"-->
+                     <!--th:src="${'https://www.mautic.org/media/images/default_avatar.png'}"-->
+                     <!--data-toggle="tooltip"-->
+                     <!--title="click here to change the profile image"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--carousal start-->
+    <div class="row">
+
+        <div class="col-md-8 col-md-offset-2">
+            <div class="box-group" id="accordion">
                 <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
 
 
                 <div class="panel box box-danger">
                     <div class="box-header with-border">
                         <h4 class="box-title">
-                            <a aria-expanded="false" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                Employee Qualification
-                            </a>
+                            <a aria-expanded="false" class="collapsed"
+                               data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseOne">
+                                <span  data-toggle="tooltip" title="Click here to view Academic and Professional Qualifications Form " >Academic and Professional Qualifications </span>
+                           </a>
                         </h4>
                     </div>
                     <!--<div style="height: 0px;" aria-expanded="false" id="collapseOne" class="panel-collapse collapse">-->
-                    <div  aria-expanded="false" id="collapseOne" class="panel-collapse collapse in">
+                    <div aria-expanded="false" id="collapseOne"
+                         class="panel-collapse collapse in">
 
-                        Employee Qualification Form
+                        <span>
+                            Academic and Professional Qualification form should goes here
+                        </span>
 
                     </div>
                 </div>
 
+                <div class="panel box box-primary">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">
+                            <a class="" aria-expanded="false" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseTwo"> Language Skills </a>
+                        </h4>
 
-                <!--</div>-->
+                    </div>
+                    <!--<div  aria-expanded="false" id="collapseTwo" class="collapsed">-->
+                    <div style="height: 0px;" aria-expanded="false" id="collapseTwo"
+                         class="panel-collapse collapse">
+
+
+                        <div>
+                            <form role="form">
+                                <div class="box-body">
+                                    <div>
+                                        <h4 style="font-weight: bold;text-align: center;">English Language Skills </h4>
+                                        <div class="form-group">
+                                            <label>Reading</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-group">
+                                            <label>Writing</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+                                        <br/>
+
+
+                                        <div class="form-group">
+                                            <label>Listening</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+
+                                        <br/>
+                                        <div class="form-group">
+                                            <label>Speaking</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+                                        <br/>
+                                    </div>
+
+
+
+                                    <!--chinese starts-->
+                                    <div>
+                                        <h4 style="font-weight: bold;text-align: center;">Chinese Language Skills </h4>
+                                        <div class="form-group">
+                                            <label>Reading</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-group">
+                                            <label>Writing</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+                                        <br/>
+
+
+                                        <div class="form-group">
+                                            <label>Listening</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+
+                                        <br/>
+                                        <div class="form-group">
+                                            <label>Speaking</label>
+                                            <select class="example-bars">
+                                                <option value="1">Poor</option>
+                                                <option value="2">Average</option>
+                                                <option value="3">Good</option>
+                                                <option value="4">Very Good</option>
+                                                <option value="5">Excellent</option>
+                                            </select>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <!--chinese ends-->
+                                </div>
+                                <!--</div>-->
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-        <!--carousal ends-->
-    </div><!-- /.content-wrapper -->
-
-    <div th:include = "fragments/footer :: footer">
-
     </div>
-
-
-    <div th:include = "fragments/control-sidebar :: control-sidebar">
-
-    </div>
+    <!--carousal ends-->
 </div>
-
-
-<div th:include = "fragments/bottom-js-declaration :: bottom-js-declaration">
-
+<div th:include="fragments/footer :: footer"></div>
+<div th:include="fragments/control-sidebar :: control-sidebar"></div>
 </div>
+<div th:include="fragments/bottom-js-declaration :: bottom-js-declaration"></div>
+
+<script type="text/javascript">
+    $(function() {
+        $('.example-bars').barrating({
+            theme: 'bars-movie'
+        });
+    });
+</script>
 
 </body>
 </html>
