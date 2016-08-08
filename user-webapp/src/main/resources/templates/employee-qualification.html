@@ -15,219 +15,385 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
-    <!--start-->
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div>
-                <h3 class="box-title text-center"
-                    style="text-align: center; font-weight: bold;">Educational Qualifications</h3>
-            </div>
+<!--start-->
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div>
+            <h3 class="box-title text-center"
+                style="text-align: center; font-weight: bold;">Educational Qualifications</h3>
         </div>
     </div>
-    <!--end-->
+</div>
+<!--end-->
 
 
-    <!--<div class="row">-->
-        <!--<div class="col-md-2 col-md-offset-5">-->
-            <!--<div style="margin-bottom: 15px;">-->
-                <!--<img width="180" height="180"-->
-                     <!--th:src="${'https://www.mautic.org/media/images/default_avatar.png'}"-->
-                     <!--data-toggle="tooltip"-->
-                     <!--title="click here to change the profile image"/>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-md-2 col-md-offset-5">-->
+<!--<div style="margin-bottom: 15px;">-->
+<!--<img width="180" height="180"-->
+<!--th:src="${'https://www.mautic.org/media/images/default_avatar.png'}"-->
+<!--data-toggle="tooltip"-->
+<!--title="click here to change the profile image"/>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
 
-    <!--carousal start-->
-    <div class="row">
+<!--carousal start-->
+<div class="row">
 
-        <div class="col-md-8 col-md-offset-2">
-                <div class="panel box box-danger">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">
-                            <a aria-expanded="false" class="collapsed"
-                               data-toggle="collapse" data-parent="#accordion"
-                               href="#collapseOne">
-                                <span  data-toggle="tooltip" title="Click here to view Academic and Professional Qualifications Form " >Academic and Professional Qualifications </span>
-                           </a>
-                        </h4>
-                    </div>
-                    <!--<div style="height: 0px;" aria-expanded="false" id="collapseOne" class="panel-collapse collapse">-->
-                    <div aria-expanded="false" id="collapseOne"
-                         class="panel-collapse collapse in">
+<div class="col-md-8 col-md-offset-2">
+<div class="panel box box-danger">
+    <div class="box-header with-border">
+        <h4 class="box-title">
+            <a aria-expanded="false" class="collapsed"
+               data-toggle="collapse" data-parent="#accordion"
+               href="#collapseOne">
+                <span  data-toggle="tooltip" title="Click here to view Academic and Professional Qualifications Form " >Academic and Professional Qualifications </span>
+            </a>
+        </h4>
+    </div>
+    <!--<div style="height: 0px;" aria-expanded="false" id="collapseOne" class="panel-collapse collapse">-->
+    <div aria-expanded="false" id="collapseOne"
+         class="panel-collapse collapse in">
 
-                        <span>
-                            Academic and Professional Qualification form should goes here
-                        </span>
-
-                    </div>
+        <form role="form">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="firstName">Qualification Title</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="e.g:- B.Sc (Hons) Computing"/>
                 </div>
 
-                <div class="panel box box-primary">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">
-                            <a class="" aria-expanded="false" data-toggle="collapse"
-                               data-parent="#accordion" href="#collapseTwo"> Language Skills </a>
-                        </h4>
+                <div class="form-group">
+                    <label >Specialization/Area of Study</label>
+                    <input type="text" class="form-control" placeholder="e.g:- Software Engineering"/>
+                </div>
 
-                    </div>
-                    <!--<div  aria-expanded="false" id="collapseTwo" class="collapsed">-->
-                    <div style="height: 0px;" aria-expanded="false" id="collapseTwo"
-                         class="panel-collapse collapse">
-
-
-                        <div class = "employee-language-skills-form">
-                            <form role="form">
-                                <div class="box-body">
-                                    <div>
-                                        <h4 style="font-weight: bold;text-align: center;">English Language Skills </h4>
-                                        <div class="form-group">
-                                            <label>Reading</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-
-                                        <br/>
-
-                                        <div class="form-group">
-                                            <label>Writing</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-                                        <br/>
+                <label>Qualification Type</label>
+                <select class="form-control">
+                    <option>Bachelor Degree</option>
+                    <option>Master Degree</option>
+                    <option>Doctoral Degree</option>
+                    <option>Certificate</option>
+                    <option>Diploma</option>
+                    <option>Professional Certification</option>
+                    <option>Professional Membership</option>
+                </select>
 
 
-                                        <div class="form-group">
-                                            <label>Listening</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
+                <div class="form-group">
+                    <label>Learning Mode</label>
+                    <select class="form-control">
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                    </select>
+                </div>
 
-                                        <br/>
-                                        <div class="form-group">
-                                            <label>Speaking</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-                                        <br/>
-                                    </div>
+                <div class="form-group">
+                    <label>Awarded Grade</label>
+                    <input type="text" class="form-control" placeholder="e.g:- 1st class honours"  />
+                </div>
 
-
-
-                                    <!--chinese starts-->
-                                    <div>
-                                        <h4 style="font-weight: bold;text-align: center;">Chinese Language Skills </h4>
-                                        <div class="form-group">
-                                            <label>Reading</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-
-                                        <br/>
-
-                                        <div class="form-group">
-                                            <label>Writing</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-                                        <br/>
-
-
-                                        <div class="form-group">
-                                            <label>Listening</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-
-                                        <br/>
-                                        <div class="form-group">
-                                            <label>Speaking</label>
-                                            <select class="example-bars">
-                                                <option value="1">Poor</option>
-                                                <option value="2">Average</option>
-                                                <option value="3">Good</option>
-                                                <option value="4">Very Good</option>
-                                                <option value="5">Excellent</option>
-                                            </select>
-                                        </div>
-                                        <br/>
-                                    </div>
-                                    <!--chinese ends-->
-                                </div>
-                                <!--</div>-->
-
-                                <div class="form-group box-footer">
-                                    <!--<button type="button" class="btn btn-primary">Add New Language</button>-->
-                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addNewLanguageModal">
-                                        Add New Language
-                                    </button>
-                                </div>
-
-                            </form>
-
+                <div class="form-group">
+                    <label>Length of Study</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select class="form-control">
+                                <option>Years</option>
+                                <option>0 Year</option>
+                                <option>1 Year</option>
+                                <option>2 Years</option>
+                                <option>3 Years</option>
+                                <option>4 Years</option>
+                                <option>5 Years</option>
+                                <option>6 Years</option>
+                                <option>7 Years</option>
+                                <option>8 Years</option>
+                            </select>
                         </div>
 
-
-                        <div id="addNewLanguageModal" class="modal fade" tabindex="-1" role="dialog">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title">Modal title</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>One fine body&hellip;</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div><!-- /.modal -->
-
-
+                        <div class="col-md-4">
+                            <select class="form-control">
+                                <option>Months</option>
+                                <option>0 Month</option>
+                                <option>1 Month</option>
+                                <option>2 Month</option>
+                                <option>3 Month</option>
+                                <option>4 Month</option>
+                                <option>5 Month</option>
+                                <option>6 Month</option>
+                                <option>7 Month</option>
+                                <option>8 Month</option>
+                                <option>9 Month</option>
+                                <option>10 Month</option>
+                                <option>11 Month</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-        </div>
+
+                <div class="form-group">
+                    <label>Started Date</label>
+                    <!--<input type="text" class="form-control"  />-->
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control pull-right startedDate"  type="text"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Completed Date</label>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control pull-right completedDate"  type="text"/>
+                    </div>
+                </div>
+
+                <br/>
+                <div class="form-group">
+                    <label>Awarded Date (Optional)</label>
+                    <p class="help-block">Please fill this if you have been awarded an professional membership</p>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control pull-right expiredDate"  type="text"/>
+                    </div>
+                </div>
+
+                <br/>
+                <div class="form-group">
+                    <label>Expired Date (Optional)</label>
+                    <p class="help-block">Please fill this if your qualification expires after a specific date. e.g:- professional certification/membership</p>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control pull-right expiredDate"  type="text"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Awarded Body</label>
+                    <input type="text" class="form-control" placeholder="e.g:- University of Greenwich"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Awarded Body Website</label>
+                    <input type="text" class="form-control" placeholder="e.g:- http://www2.gre.ac.uk"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Country(Awarded Body)</label>
+                    <input type="text" class="form-control" placeholder="e.g:- United Kingdom" />
+                </div>
+
+                <div class="form-group">
+                    <label>Learning Institute</label>
+                    <input type="text" class="form-control" placeholder="e.g:- ABC City Campus" />
+                </div>
+
+                <div class="form-group">
+                    <label>Country (Learning Institute)</label>
+                    <input type="text" class="form-control" placeholder="e.g:- Argentina"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Learning Institute (Website)</label>
+                    <input type="text" class="form-control" placeholder="e.g:- http://www2.abc.edu.uk"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Supporting Document (e.g- Scanned copy of the Certificate)</label>
+                    <input id="exampleInputFile" type="file"/>
+                </div>
+
+                <p class="help-block">Uploading file Path. C:\Users\Public.</p>
+
+
+                <div class="form-group">
+                    <label>Additional Note</label>
+                    <textarea class="form-control" rows="3" placeholder=""></textarea>
+                </div>
+
+                <div class="form-group box-footer">
+                    <!--<button type="button" class="btn btn-primary">Add New Language</button>-->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addNewLanguageModal">
+                        Add Qualification
+                    </button>
+                </div>
+
+            </div>
+        </form>
     </div>
-    <!--carousal ends-->
+</div>
+
+<div class="panel box box-primary">
+    <div class="box-header with-border">
+        <h4 class="box-title">
+            <a class="" aria-expanded="false" data-toggle="collapse"
+               data-parent="#accordion" href="#collapseTwo"> Language Skills </a>
+        </h4>
+
+    </div>
+    <!--<div  aria-expanded="false" id="collapseTwo" class="collapsed">-->
+    <div style="height: 0px;" aria-expanded="false" id="collapseTwo"
+         class="panel-collapse collapse">
+
+
+        <div class = "employee-language-skills-form">
+            <form role="form">
+                <div class="box-body">
+                    <div>
+                        <h4 style="font-weight: bold;text-align: center;">English Language Skills </h4>
+                        <div class="form-group">
+                            <label>Reading</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+                        <br/>
+
+                        <div class="form-group">
+                            <label>Writing</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+                        <br/>
+
+
+                        <div class="form-group">
+                            <label>Listening</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+                        <br/>
+                        <div class="form-group">
+                            <label>Speaking</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <!--chinese starts-->
+                    <div>
+                        <h4 style="font-weight: bold;text-align: center;">Chinese Language Skills </h4>
+                        <div class="form-group">
+                            <label>Reading</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+                        <br/>
+
+                        <div class="form-group">
+                            <label>Writing</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+                        <br/>
+
+
+                        <div class="form-group">
+                            <label>Listening</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+                        <br/>
+                        <div class="form-group">
+                            <label>Speaking</label>
+                            <select class="example-bars">
+                                <option value="1">Poor</option>
+                                <option value="2">Average</option>
+                                <option value="3">Good</option>
+                                <option value="4">Very Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+                        <br/>
+                    </div>
+                    <!--chinese ends-->
+                </div>
+                <!--</div>-->
+
+                <div class="form-group box-footer">
+                    <!--<button type="button" class="btn btn-primary">Add New Language</button>-->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addNewLanguageModal">
+                        Add New Language
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div id="addNewLanguageModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+    </div>
+</div>
+</div>
+</div>
+<!--carousal ends-->
 </div>
 <div th:include="fragments/footer :: footer"></div>
 <div th:include="fragments/control-sidebar :: control-sidebar"></div>
