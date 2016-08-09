@@ -9,73 +9,92 @@
 <form role="form">
     <div class="box-body">
 
-        Work Experiences Form
+        <div class="form-group">
+            <label>Employer Name</label>
+            <input type="text" class="form-control" placeholder="e.g:- ABC Technologies Pte Ltd"/>
+        </div>
 
         <div class="form-group">
-            <label for="employeeNumber">Employee Number</label>
-            <input type="email" class="form-control" name = "employeeNumber" id="employeeNumber" placeholder="Enter Employee Number"/>
+            <label>Employer Website</label>
+            <input type="text"  class="form-control" placeholder="e.g:- www.abc.com"/>
         </div>
+
         <div class="form-group">
-            <label for="epfNo">EPF/ETF No</label>
-            <input type="text" class="form-control" id="epfNo" placeholder="Enter EPF/ETF No"/>
+            <label>Employer Address</label>
+            <textarea class="form-control" rows="3"></textarea>
         </div>
+
         <div class="form-group">
             <label for="designation">Designation</label>
-            <input type="text" class="form-control" id="designation" placeholder="Enter Designation"/>
+            <input type="text" class="form-control" id="designation" placeholder="e.g:- Senior Software Engineer"/>
         </div>
 
         <div class="form-group">
-            <label for="employmentType">Employment Type</label>
-            <input type="text" class="form-control" id="employmentType" placeholder="Enter Employment Type"/>
-        </div>
-
-        <div class="form-group">
-            <label for="department">Department</label>
-            <input type="text" class="form-control" id="department" placeholder="Enter Department"/>
-        </div>
-
-        <div class="form-group">
-            <label for="dateOfJoined">Date of Joined</label>
-            <input type="text" class="form-control" id="dateOfJoined" placeholder="Enter Date of Joined"/>
-        </div>
-
-        <div class="form-group">
-            <label for="dateOfConfirmed">Date of Confirmed</label>
-            <input type="text" class="form-control" id="dateOfConfirmed" placeholder="Enter Date of Confirmed"/>
-        </div>
-
-        <div class="form-group">
-            <label for="probationPeriod">Probation Period</label>
-            <input type="text" class="form-control" id="probationPeriod" placeholder="Enter Probation Period"/>
+            <label>Employment Type</label>
+            <select class="form-control">
+                <option>Please Select</option>
+                <option>Probation</option>
+                <option>Contract</option>
+                <option>Permanent</option>
+                <option>Freelance</option>
+            </select>
         </div>
 
 
         <div class="form-group">
-            <label for="workMobile">Work Mobile</label>
-            <input type="text" class="form-control" id="workMobile" placeholder="Enter Work Mobile"/>
+            <label>Work Schedule</label>
+            <select class="form-control">
+                <option>Please Select</option>
+                <option>Full Time</option>
+                <option>Part Time</option>
+            </select>
         </div>
 
         <div class="form-group">
-            <label for="workEmail">Company Email</label>
-            <input type="text" class="form-control" id="workEmail" placeholder="Enter Company Email"/>
+            <label>Date of Joined</label>
+            <!--<input type="text" class="form-control" id="dateOfJoined" placeholder="Click Here"/>-->
+            <div class="input-group date">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <input class="form-control pull-right completedDate"  type="text" placeholder="Click here to view calender"/>
+            </div>
+
         </div>
 
         <div class="form-group">
-            <label for="workLandPhone">Land Phone</label>
-            <input type="text" class="form-control" id="workLandPhone" placeholder="Enter Land Phone"/>
+            <label>Date of Resigned</label>
+            <!--<input type="text" class="form-control" id="dateOfConfirmed" placeholder="Click Here"/>-->
+            <div class="input-group date">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <input class="form-control pull-right completedDate"  type="text" placeholder="Click here to view calender"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Job Responsibilities /Tasks</label>
+            <textarea class="form-control" rows="5"></textarea>
         </div>
 
 
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"/> Add Work Info
-            </label>
+        <div class="form-group">
+            <label>Employer Telephone</label>
+            <input type="text" class="form-control"/>
         </div>
+
+        <div class="form-group">
+            <label for="workEmail">Employer Email</label>
+            <input type="text" class="form-control" id="workEmail" placeholder="e.g : info@abc.com "/>
+        </div>
+
     </div>
 
     <div class="box-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Work Experience</button>
     </div>
+
 </form>
 </div>
 
